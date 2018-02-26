@@ -21,7 +21,7 @@
   	max-width: 1000px;
   	margin: auto;
     margin-top: 30px;
-  	overflow: hidden; 
+  	overflow: hidden;
     background: #fff;
     opacity: 0.95;
     padding: 30px;
@@ -130,6 +130,7 @@
     text-decoration: none;
     color: black;
     font-size: 14px;
+    margin-right: 30px;
   }
 
   .box_back a:hover {

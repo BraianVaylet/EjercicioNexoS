@@ -20,6 +20,7 @@
 
   <div class="box_back">
     <a href="<?php echo RUTA ?>views/cerrar.php">Cerrar Sesion y Volver</a>
+    <a href="<?php echo RUTA ?>menu.php">Volver</a>
   </div>
 
 <?php
