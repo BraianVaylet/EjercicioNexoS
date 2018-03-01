@@ -10,7 +10,7 @@
       <div class="box_name">
         <label for="id">Selecione un valor para la ID: </label>
         <br>
-        <input id="id" type="number" name="id" min="0" max="100" value="1"> <!-- defino q se tipo numerico + valoresMIn y Max para evitarme q ingrese decimales -->
+        <input id="id" type="number" name="id" min="0" max="100" value="1">
       </div>
 
       <input type="submit" name="enviar" class="btn" value="Enviar">
@@ -26,3 +26,5 @@
 <?php
   require(RAIZ . 'views/footer.php');
 ?>
+  </body>
+</html>

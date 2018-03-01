@@ -3,7 +3,7 @@
     require "config.php";
     $usuario = $_SESSION['usuario'];
 
-    if (!isset($_SESSION['valores_ok'])) {
+    if (!isset($_SESSION['valores_ok'])) { // SI NO SE SETEA LA SESION valores_ok SE LE ASIGNA UN ARRAY VACIO.
       $_SESSION['valores_ok'] = array();
     }
 

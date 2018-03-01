@@ -4,13 +4,16 @@
     require 'funciones.php';
 
     $usuario = $_SESSION['usuario'];
+
+    // DEFINO ALGUNAS VARIABLES AUXILIARES.
     $error = '';
     $id_ok = '';
+    $contador = 0;
 
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-      $id = int_datos(filter_var($_GET['id']),FILTER_SANITIZE_NUMBER_FLOAT);
+      $id = int_datos(filter_var($_GET['id']),FILTER_SANITIZE_NUMBER_FLOAT); // LEVANTO LA VAR ID DEL FORM
 
-      //==CONDICIONES==
+      //== CONDICIONES ==
       if (!par($id)) {  // RETORNA SI EL VALOR ES PAR O IMPAR.
         $error .= "el numero ingresado es impar <br>";
       }
@@ -23,7 +26,8 @@
         $id_ok = $id;
       }
 
-      $valor_ok = $_SESSION['valores_ok'] ? (array) $_SESSION['valores_ok'] : null; //??????
+      // GUARDO LOS ID QUE CUMPLAN LAS CONDICIONES EN UN ARRAY.
+      $valor_ok = $_SESSION['valores_ok'] ? (array) $_SESSION['valores_ok'] : null;
       $valor_ok[] = $id_ok;
       $_SESSION['valores_ok'] = $valor_ok;
     }
