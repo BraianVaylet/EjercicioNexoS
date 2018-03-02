@@ -1,0 +1,9 @@
+Hola!
+Consejo para correr el script:
+
+Realice el script en el localhost de wamp.
+
+Antes de correr el script, abrir el archivo “config.php”, en el se encuentran definidas dos variables “RAIZ” y “RUTA”.
+Es necesario cambiarlas para que funcione correctamente.
+
+Saludos!
