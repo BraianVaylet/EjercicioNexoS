@@ -43,4 +43,24 @@ $(function() {
     // NECESITO ENVIAR ALGUNA VARIABLE (valor_id) A UN ARCHIVO ".PHP" PARA PODER GUARDARLO EN UN ARRAY Y LUEGO PODER MOSTRARLO.
     // OPCIONES PARA HACERLO: CON AJAX -- [NO ME SALE!]
 
+    function jquery_a_php(valorId, valorAux){
+            var parametros = {
+                    "valorId" : 2,
+                    "valorAux" : 1
+            };
+            alert("funciona!");
+            $.ajax({
+                    data:  parametros,
+                    url:   'http://localhost/NexoSmart/EjercicioNexoS/procesosJSenPHP.php',
+                    type:  'post',
+                    dataType: "html",
+                    beforeSend: function () {
+                            $("#resultado").html("Procesando, espere por favor...");
+                    },
+                    success:  function (response) {
+                            alert("Ha sido ejecutada la acción.");
+                            $("#resultado").html(response);
+                    }
+            });
+    }
 });
